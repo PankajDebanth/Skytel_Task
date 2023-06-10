@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.title {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+body {
+  background-color: #F1F5F1;
+}
+
+.container {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  margin: 80px auto 30px;
+  --primary-color: #A020F0;
+  --highlight-color: #b040f6;
+}
+
+.select-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn .btn-text {
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+}
+
+.select-btn .arrow-dwn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 21px;
+  width: 21px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50%;
+  background: 	#A020F0;
+  transition: 0.3s;
+}
+
+.select-btn.open .arrow-dwn {
+  transform: rotate(-180deg);
+}
+
+.list-items {
+  position: relative;
+  margin-top: 15px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.select-btn.open ~ .list-items {
+  display: block;
+}
+
+.list-items .item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 50px;
+  padding: 0 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.list-items .item:hover {
+  background-color: #e7edfe;
+}
+
+.item .item-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+.item .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  margin-right: 12px;
+  border: 1.5px solid #c0c0c0;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border-color: #c0c0c0;
+}
+
+.item.checked .checkbox {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.checkbox .check-icon {
+  color: #fff;
+  font-size: 11px;
+  transition: all 0.2s ease-in-out;
+}
+
+.item.checked .check-icon {
+  display: inline-block;
+  transform: scale(1);
+}
+
+.check-icon:before {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
